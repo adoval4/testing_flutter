@@ -73,7 +73,8 @@ class DescriptionPlace extends StatelessWidget {
             place_name,
             style: TextStyle(
               fontSize: 30.0,
-              fontWeight: FontWeight.w900
+              fontFamily: "Lato",
+                fontWeight: FontWeight.bold
             ),
             textAlign: TextAlign.left,
           ),
