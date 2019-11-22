@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 
 class DescriptionPlace extends StatelessWidget {
+
+  String place_name;
+  int stars;
+  String place_description;
+
+  DescriptionPlace(this.place_name, this.stars, this.place_description);
+
   @override
   Widget build(BuildContext context) {
 
@@ -15,6 +22,28 @@ class DescriptionPlace extends StatelessWidget {
       ),
     );
 
+    final start_half = Container(
+      margin: EdgeInsets.only(
+          top: 323.0,
+          right: 3.0
+      ),
+      child: Icon(
+        Icons.star_half,
+        color: Colors.amber,
+      ),
+    );
+
+    final start_border = Container(
+      margin: EdgeInsets.only(
+          top: 323.0,
+          right: 3.0
+      ),
+      child: Icon(
+        Icons.star_border,
+        color: Colors.amber,
+      ),
+    );
+
     final description = Container(
       margin: EdgeInsets.only(
         top: 20.0,
@@ -22,7 +51,7 @@ class DescriptionPlace extends StatelessWidget {
         right: 20.0
       ),
       child: Text(
-        """Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to ...""",
+        place_description,
         style: TextStyle(
             fontSize: 16.0,
             fontWeight: FontWeight.w300,
@@ -41,7 +70,7 @@ class DescriptionPlace extends StatelessWidget {
             right: 20.0
           ),
           child: Text(
-            'Duwili Ella',
+            place_name,
             style: TextStyle(
               fontSize: 30.0,
               fontWeight: FontWeight.w900
@@ -55,7 +84,7 @@ class DescriptionPlace extends StatelessWidget {
             star,
             star,
             star,
-            star
+            start_border
           ],
         )
       ],
