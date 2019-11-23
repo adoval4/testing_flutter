@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 // Custom widgets
 import 'package:platzi_trips_app/description_place.dart';
 import 'package:platzi_trips_app/review_list.dart';
+import 'package:platzi_trips_app/gradient_background.dart';
 
 void main() => runApp(MyApp());
 
@@ -16,21 +17,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.green,
       ),
         home: Scaffold(
-          appBar: AppBar(
-            // Here we take the value from the MyHomePage object that was created by
-            // the App.build method, and use it to set our appbar title.
-            leading: IconButton(
-              icon: const Icon(
-                  Icons.arrow_back,
-                  color: Colors.white
-              ),
-              tooltip: 'Back',
-            ),
-            title: Text('Share'),
-          ),
-          body: Container(
-            child: new SingleChildScrollView(
-              child: Column(
+          body: Stack(
+            children: <Widget>[
+              ListView(
                 children: <Widget>[
                   new DescriptionPlace(
                       "Bahamas",
@@ -63,7 +52,8 @@ class MyApp extends StatelessWidget {
                   ])
                 ],
               ),
-            ),
+              GradientBackground()
+            ]
           )
         )
       // home: MyHomePage(title: 'Flutter Demo Home Page'),
