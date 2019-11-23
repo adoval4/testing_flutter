@@ -31,13 +31,36 @@ class ReviewList extends StatelessWidget {
       ));
     }
 
-    return Container(
+    final title = Container(
+      margin: EdgeInsets.only(
+        left: 20.0,
+        top: 30.0,
+        bottom: 5.0
+      ),
+      child: Text(
+        'All reviews',
+        textAlign: TextAlign.left,
+        style: TextStyle(
+          color: Colors.black45
+        ),
+      ),
+    );
+
+    final reviewItems = Container(
       margin: EdgeInsets.only(
         bottom: 30.0,
       ),
       child: Column(
         children: reviewWidgets,
       ),
+    );
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        title,
+        reviewItems
+      ],
     );
   }
 
