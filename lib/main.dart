@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 // Custom widgets
 import 'package:platzi_trips_app/description_place.dart';
+import 'package:platzi_trips_app/review.dart';
 
 void main() => runApp(MyApp());
 
@@ -27,10 +28,20 @@ class MyApp extends StatelessWidget {
             ),
             title: Text('Share'),
           ),
-          body: new DescriptionPlace(
-            "Bahamas",
-            4,
-            """Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of  type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged"""
+          body: Column(
+            children: <Widget>[
+              new DescriptionPlace(
+                  "Bahamas",
+                  4,
+                  """Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of  type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged"""
+              ),
+              new Review(
+                'assets/img/traveler_image.png',
+                'Adolfo',
+                '1 review . 5 photos',
+                'I loved the place. Totally worth it!'
+              )
+            ],
           )
         )
       // home: MyHomePage(title: 'Flutter Demo Home Page'),

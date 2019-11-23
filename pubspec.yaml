@@ -70,6 +70,10 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+  assets:
+    - assets/img/traveler_image.png
+
   fonts:
     - family: Lato
       fonts:
