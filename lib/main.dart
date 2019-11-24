@@ -5,6 +5,7 @@ import 'package:platzi_trips_app/description_place.dart';
 import 'package:platzi_trips_app/review_list.dart';
 import 'package:platzi_trips_app/header_app_bar.dart';
 
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
