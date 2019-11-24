@@ -73,6 +73,9 @@ flutter:
 
   assets:
     - assets/img/traveler_image.png
+    - assets/img/image1.jpg
+    - assets/img/image2.jpg
+    - assets/img/image3.jpg
 
   fonts:
     - family: Lato
